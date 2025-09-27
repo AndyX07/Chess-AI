@@ -2,9 +2,9 @@
 #include "Renderer.h"
 #include "MoveGen.h"
 #include "Engine.h"
+#include <SDL.h>
 #include <SDL_image.h>
 #include <cstring>
-#include <unistd.h>
 #include <iostream>
 
 Board::Board() {
@@ -22,7 +22,7 @@ Board::Board() {
     }
     renderer->setBoardRef(pieces);
     renderer->setHighlights(g);
-    renderer->loadPieceImages("../images/");
+    renderer->loadPieceImages("./images/");
 }
 
 Board::~Board() {
@@ -120,7 +120,7 @@ void Board::mouse(SDL_MouseButtonEvent e){
                                 return;
                             }
                         }
-                        usleep(10000);
+                        SDL_Delay(100);
                     }
                 }
             }

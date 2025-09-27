@@ -3,7 +3,6 @@
 #include <iostream>
 
 int main(int argc, char *argv[]){
-
     bool quit=false;
     SDL_Event e;
     Board cb;
