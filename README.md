@@ -1,12 +1,37 @@
 # Chess-Engine
 
-Chess Engine Created in C++ using SDL2. The algorithm uses minimax and is made more efficient by alpha beta pruning
-
-![Screenshot 2025-05-04 201414](https://github.com/user-attachments/assets/744ea7d1-a0f0-4a61-a4a3-7d128fc2dac1)
+Chess Engine created in C++ using SDL2. The engine uses a **minimax algorithm** optimized with **alpha-beta pruning** for efficient move calculation.
 
 ## Technologies
 - C++
-- SDl2
+- SDL2
+- SDL2_image
 
 ## Requirements
-Make sure you have SDL2 installed as well as SDL2_image <br/>
+Make sure you have **SDL2** and **SDL2_image** installed on your system.
+
+### Windows
+1. Download the SDL2 and SDL2_image development libraries.  
+2. Update the paths in `CMakeLists.txt` **or override them at configuration**:
+
+```
+cmake -B build -S . -DSDL2_PATH="C:/Path/To/SDL2" -DSDL2_IMAGE_PATH="C:/Path/To/SDL2_image"
+cmake --build build
+```
+
+3. Replace `"C:/Path/To/SDL2"` and `"C:/Path/To/SDL2_image"` with the paths where you installed SDL2 and SDL2_image.
+
+## Building the Project
+```
+# Traditional method
+mkdir build
+cd build
+cmake ..
+cmake --build .
+
+# Windows with path overrides
+cmake -B build -S . -DSDL2_PATH="C:/Path/To/SDL2" -DSDL2_IMAGE_PATH="C:/Path/To/SDL2_image"
+cmake --build build
+```
+
+![Screenshot](https://github.com/user-attachments/assets/744ea7d1-a0f0-4a61-a4a3-7d128fc2dac1)
