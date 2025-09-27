@@ -1,6 +1,7 @@
 #include "Renderer.h"
 #include <SDL_image.h>
 #include <cstring>
+#include <string>
 
 Renderer::Renderer() {
     brown = {168, 117, 50, 255};
@@ -22,18 +23,18 @@ bool Renderer::init() {
 }
 
 void Renderer::loadPieceImages(const char* basePath) {
-    pieceImages['p'] = IMG_Load((std::string(basePath)+ "bpawn.png").c_str());
-    pieceImages['P'] = IMG_Load((std::string(basePath)+ "wpawn.png").c_str());
-    pieceImages['r'] = IMG_Load((std::string(basePath)+ "brook.png").c_str());
-    pieceImages['R'] = IMG_Load((std::string(basePath)+ "wrook.png").c_str());
-    pieceImages['n'] = IMG_Load((std::string(basePath)+ "bknight.png").c_str());
-    pieceImages['N'] = IMG_Load((std::string(basePath)+ "wknight.png").c_str());
-    pieceImages['b'] = IMG_Load((std::string(basePath)+ "bbishop.png").c_str());
-    pieceImages['B'] = IMG_Load((std::string(basePath)+ "wbishop.png").c_str());
-    pieceImages['q'] = IMG_Load((std::string(basePath)+ "bqueen.png").c_str());
-    pieceImages['Q'] = IMG_Load((std::string(basePath)+ "wqueen.png").c_str());
-    pieceImages['k'] = IMG_Load((std::string(basePath)+ "bking.png").c_str());
-    pieceImages['K'] = IMG_Load((std::string(basePath)+ "wking.png").c_str());
+    pieceImages['p'] = IMG_Load((std::string(basePath) + "bpawn.png").c_str());
+    pieceImages['P'] = IMG_Load((std::string(basePath) + "wpawn.png").c_str());
+    pieceImages['r'] = IMG_Load((std::string(basePath) + "brook.png").c_str());
+    pieceImages['R'] = IMG_Load((std::string(basePath) + "wrook.png").c_str());
+    pieceImages['n'] = IMG_Load((std::string(basePath) + "bknight.png").c_str());
+    pieceImages['N'] = IMG_Load((std::string(basePath) + "wknight.png").c_str());
+    pieceImages['b'] = IMG_Load((std::string(basePath) + "bbishop.png").c_str());
+    pieceImages['B'] = IMG_Load((std::string(basePath) + "wbishop.png").c_str());
+    pieceImages['q'] = IMG_Load((std::string(basePath) + "bqueen.png").c_str());
+    pieceImages['Q'] = IMG_Load((std::string(basePath) + "wqueen.png").c_str());
+    pieceImages['k'] = IMG_Load((std::string(basePath) + "bking.png").c_str());
+    pieceImages['K'] = IMG_Load((std::string(basePath) + "wking.png").c_str());
 }
 
 void Renderer::close() {
